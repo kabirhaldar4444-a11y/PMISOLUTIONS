@@ -1,0 +1,81 @@
+:root {
+  /* Color Palette - 2026 Premium Dark Luxury Theme */
+  --primary-color: #1E3A8A;       /* Deep Luxury Blue */
+  --secondary-color: #3B82F6;     /* Electric Indigo Blue */
+  --accent-color: #FF7A00;        /* Vibrant Neon Orange */
+  --accent-hover: #E06B00;        /* Darker Neon Orange */
+  
+  --text-dark: #FFFFFF;           /* White text on dark luxury backgrounds */
+  --text-muted: #94A3B8;          /* Premium Cool Grey */
+  --text-light: #FFFFFF;          /* Pure White text */
+  
+  --bg-primary: #050816;          /* Deep Dark Aurora Space Background */
+  --bg-secondary: #0A0E29;        /* Deep Blue-Gray Panel Color */
+  --bg-dark: #02040A;             /* Pure Dark Space Black */
+  
+  --border-color: rgba(255, 255, 255, 0.08);   /* Ultra Fine Glassmorphic Border */
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --hover-shadow: 0 20px 50px rgba(255, 122, 0, 0.15);
+  --nav-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  /* Gradients & Blurs */
+  --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #0D1B3E 100%);
+  --gradient-accent: linear-gradient(135deg, #FF7A00 0%, #FF9E2A 100%);
+  --gradient-dark: linear-gradient(135deg, #0A0E29 0%, #050816 100%);
+  --gradient-aurora: radial-gradient(circle at 50% -20%, rgba(30, 58, 138, 0.3) 0%, transparent 60%);
+  
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Outfit', 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --spacing-section: 6rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Container */
+  --container-width: 1240px;
+}
+
+:root.light-theme {
+  /* Color Palette - 2026 Light Theme */
+  --primary-color: #1E3A8A;
+  --secondary-color: #2563eb;
+  --accent-color: #FF7A00;
+  --accent-hover: #E06B00;
+  
+  --text-dark: #0F172A;           /* Slate 900 */
+  --text-muted: #475569;          /* Slate 600 */
+  --text-light: #0F172A;          /* Slate 900 */
+  
+  --bg-primary: #F8FAFC;          /* Slate 50 */
+  --bg-secondary: #F1F5F9;        /* Slate 100 */
+  --bg-dark: #E2E8F0;             /* Slate 200 */
+  
+  --border-color: rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --hover-shadow: 0 15px 40px rgba(255, 122, 0, 0.1);
+  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #2563eb 100%);
+  --gradient-accent: linear-gradient(135deg, #FF7A00 0%, #FF9E2A 100%);
+  --gradient-dark: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  --gradient-aurora: radial-gradient(circle at 50% -20%, rgba(255, 122, 0, 0.05) 0%, transparent 60%);
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
