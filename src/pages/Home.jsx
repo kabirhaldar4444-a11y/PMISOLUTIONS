@@ -21,12 +21,7 @@ import GovtRecognizedImage from '../assets/images/Government Recognized.jpg';
 import IndustryRespectedImage from '../assets/images/Industry-Respected.webp';
 import ProfessionalCommunityImage from '../assets/images/Professional Communit.jpg';
 
-// Partner Logos
-import TataLogo from '../assets/images/Tata.png';
-import InfosysLogo from '../assets/images/infosys.png';
-import IndeedLogo from '../assets/images/indeed.png';
-import NaukriLogo from '../assets/images/naukri.png';
-import KnowledgeAcademyLogo from '../assets/images/the knowledge academy logo.png';
+
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -205,28 +200,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. Trusted by Global Companies (Infinite Logo Slider) */}
-      <section className="companies-section">
-        <div className="container">
-          <p className="companies-title text-center text-muted">COLLABORATING WITH LEADING ENTERPRISES WORLDWIDE</p>
-          <div className="infinite-slider-container">
-            <div className="infinite-slider-track">
-              <img src={TataLogo} alt="Tata" />
-              <img src={InfosysLogo} alt="Infosys" />
-              <img src={IndeedLogo} alt="Indeed" />
-              <img src={NaukriLogo} alt="Naukri" />
-              <img src={KnowledgeAcademyLogo} alt="The Knowledge Academy" />
-              
-              {/* Duplicate track for infinite loop */}
-              <img src={TataLogo} alt="Tata" />
-              <img src={InfosysLogo} alt="Infosys" />
-              <img src={IndeedLogo} alt="Indeed" />
-              <img src={NaukriLogo} alt="Naukri" />
-              <img src={KnowledgeAcademyLogo} alt="The Knowledge Academy" />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* 3. Interactive Bento Grid (Why PMI Solutions) */}
       <section className="bento-grid-section section">

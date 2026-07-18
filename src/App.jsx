@@ -5,7 +5,6 @@ import Footer from './components/layout/Footer';
 
 // Pages
 import Home from './pages/Home';
-import Solutions from './pages/Solutions';
 import About from './pages/About';
 import Certificates from './pages/Certificates';
 import Partnerships from './pages/Partnerships';
@@ -41,7 +40,6 @@ const App = () => {
           <Routes>
             {/* Core routes */}
             <Route path="/" element={<Home />} />
-            <Route path="/solutions" element={<Solutions />} />
             <Route path="/about" element={<About />} />
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/partnerships" element={<Partnerships />} />
