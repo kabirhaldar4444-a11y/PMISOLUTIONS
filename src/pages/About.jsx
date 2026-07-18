@@ -40,7 +40,7 @@ const About = () => {
       <SectionWrapper bg="transparent">
         <div className="grid grid-2 gap-xl align-center" style={{ position: 'relative', zIndex: 2 }}>
           <div className="about-intro-text flex-column gap-md animate-fade-in">
-            <h2>PMI Professional Solutions</h2>
+            <h2>PMI Solutions</h2>
             <p className="text-muted" style={{ fontSize: '1.02rem', lineHeight: '1.7' }}>
               We collaborate with global agencies and professionals to establish baseline competency frameworks. Built on standard PMBOK® structures, our training and exam preparation resources travel across industries to optimize deployment quality.
             </p>
