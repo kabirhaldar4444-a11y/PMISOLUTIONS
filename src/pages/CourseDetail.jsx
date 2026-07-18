@@ -665,7 +665,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
           {/* Right Column: Enrollment Card only */}
           <div className="course-sidebar-area animate-fade-in">
-            <Card className="course-cta-card flex-column align-center text-center gap-md shadow-sm bg-white">
+            <Card className="course-cta-card flex-column align-center text-center gap-md shadow-sm glass-panel">
               <FaGraduationCap size={45} className="text-accent" />
               <div>
                 <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', display: 'block' }}>Professional Fee</span>
@@ -977,7 +977,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .section-title {
           font-size: 1.5rem;
-          color: var(--primary-color);
+          color: var(--text-dark);
           margin-bottom: var(--spacing-sm);
           text-transform: uppercase;
           letter-spacing: 0.5px;
@@ -997,7 +997,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .course-para {
           font-size: 1.05rem;
-          color: #4a5568;
+          color: var(--text-muted);
           line-height: 1.65;
         }
 
@@ -1020,7 +1020,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .syllabus-title {
           font-size: 1.25rem;
-          color: var(--primary-color);
+          color: var(--text-dark);
           margin-bottom: var(--spacing-sm);
           text-transform: uppercase;
           letter-spacing: 0.5px;
@@ -1032,7 +1032,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .syllabus-list li {
           font-size: 0.95rem;
-          color: #4a5568;
+          color: var(--text-muted);
           line-height: 1.5;
         }
 
@@ -1043,7 +1043,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
         .footer-details-heading {
           font-weight: 700;
           font-size: 0.85rem;
-          color: var(--primary-color);
+          color: var(--text-dark);
         }
 
         @media (max-width: 1024px) {
@@ -1120,7 +1120,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
           gap: 3rem;
           margin-top: 3rem;
           padding-top: 2.5rem;
-          border-top: 2px solid #edf2f7;
+          border-top: 2px solid var(--border-color);
         }
 
         /* What You Will Learn — full-width 2-col grid */
@@ -1139,7 +1139,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
           align-items: flex-start;
           gap: 0.6rem;
           font-size: 0.95rem;
-          color: #2d3748;
+          color: var(--text-dark);
           line-height: 1.5;
         }
 
@@ -1152,8 +1152,8 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         /* Learning policy note in sidebar */
         .learning-policy-note {
-          background: #f8fafc;
-          border: 1px solid #e2e8f0;
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-radius: 8px;
           padding: 1rem 1.2rem;
           margin-top: var(--spacing-sm);
@@ -1173,7 +1173,8 @@ const CourseDetail = ({ courseId: propCourseId }) => {
         }
 
         .ext-block {
-          background: #f8fafc;
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           border-left: 4px solid var(--accent-color);
           border-radius: 8px;
           padding: 2rem 2.5rem;
@@ -1182,7 +1183,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
         .ext-block-title {
           font-size: 1.35rem;
           font-weight: 800;
-          color: var(--primary-color);
+          color: var(--text-dark);
           text-transform: uppercase;
           letter-spacing: 0.5px;
           margin-bottom: 0.75rem;
@@ -1197,7 +1198,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .ext-block-intro {
           font-size: 1rem;
-          color: #4a5568;
+          color: var(--text-muted);
           line-height: 1.6;
           margin-bottom: 1.5rem;
         }
@@ -1210,8 +1211,8 @@ const CourseDetail = ({ courseId: propCourseId }) => {
         }
 
         .objective-card {
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
+          background: var(--glass-bg);
+          border: 1px solid var(--glass-border);
           border-radius: 8px;
           padding: 1.2rem 1.4rem;
           display: flex;
@@ -1237,7 +1238,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .objective-card p {
           font-size: 0.95rem;
-          color: #2d3748;
+          color: var(--text-dark);
           line-height: 1.55;
           margin: 0;
         }
@@ -1253,12 +1254,12 @@ const CourseDetail = ({ courseId: propCourseId }) => {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
+          background: var(--glass-bg);
+          border: 1px solid var(--glass-border);
           border-radius: 30px;
           padding: 0.45rem 1rem;
           font-size: 0.88rem;
-          color: var(--primary-color);
+          color: var(--text-dark);
           font-weight: 600;
           transition: all 0.2s ease;
         }
@@ -1305,7 +1306,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .audience-list li, .prereq-list li {
           font-size: 0.95rem;
-          color: #2d3748;
+          color: var(--text-dark);
           line-height: 1.5;
           display: flex;
           align-items: flex-start;
@@ -1331,8 +1332,8 @@ const CourseDetail = ({ courseId: propCourseId }) => {
         }
 
         .career-benefit-card {
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
+          background: var(--glass-bg);
+          border: 1px solid var(--glass-border);
           border-radius: 8px;
           padding: 1.25rem 1.5rem;
           display: flex;
@@ -1355,7 +1356,7 @@ const CourseDetail = ({ courseId: propCourseId }) => {
 
         .career-benefit-card p {
           font-size: 0.95rem;
-          color: #2d3748;
+          color: var(--text-dark);
           line-height: 1.55;
           margin: 0;
         }
