@@ -11,7 +11,7 @@ export const footerQuickLinks = [
 ];
 
 export const footerContactInfo = {
-  email: "support@pmisolutions.in",
+  email: "hrd@pmisolutions.in",
   phones: ["022-41504225"],
   addresses: [
     { name: "Noida Office", detail: "Plot No 4, Sector 135, 6nd Floor, Aykon Tower, Noida" },
