@@ -26,6 +26,14 @@ export const footerPolicyLinks = [
   { name: "Refund Policy", path: "/accessibility-statement" }
 ];
 
+export const footerSocialLinks = [
+  { 
+    name: "LinkedIn", 
+    url: "https://www.linkedin.com/company/pmi-sol/posts/?feedView=all&viewAsMember=true"
+  }
+];
+
+
 
 
 

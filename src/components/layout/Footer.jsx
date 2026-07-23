@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { footerAbout, footerQuickLinks, footerContactInfo, footerPolicyLinks } from '../../data/footerData';
+import { FaLinkedin } from 'react-icons/fa';
+import { footerAbout, footerQuickLinks, footerContactInfo, footerPolicyLinks, footerSocialLinks } from '../../data/footerData';
 import LogoImage from '../../assets/images/logo/PMI Solutions.png';
 
 const Footer = () => {
@@ -60,6 +61,25 @@ const Footer = () => {
           </Link>
           <p className="footer-subtext">{footerAbout.subText}</p>
           
+          <div className="footer-social-wrapper">
+            <span className="social-heading">Connect With Us</span>
+            <div className="social-icons">
+              {footerSocialLinks.map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link-badge linkedin"
+                  aria-label="LinkedIn Profile"
+                >
+                  <FaLinkedin className="social-icon" />
+                  <span>LinkedIn</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <form className="newsletter-form" onSubmit={handleSubscribe}>
             <div className="form-group">
               <input 
@@ -134,10 +154,25 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <div className="container flex-between flex-wrap gap-md">
+        <div className="container flex-between flex-wrap gap-md align-center">
           <p className="copyright">
             &copy; {new Date().getFullYear()} PMI Solutions. All Rights Reserved.
           </p>
+          <div className="footer-bottom-social">
+            {footerSocialLinks.map((social, idx) => (
+              <a
+                key={idx}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-linkedin-icon-link"
+                title="PMI Solutions on LinkedIn"
+                aria-label="PMI Solutions on LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+            ))}
+          </div>
           <p className="disclaimer">
             Delivering Globally Recognized Certifications in Different Domains.
           </p>
@@ -198,6 +233,57 @@ const Footer = () => {
           color: #94a3b8;
           font-size: 0.92rem;
           line-height: 1.6;
+        }
+
+        .footer-social-wrapper {
+          margin: 4px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .social-heading {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: #cbd5e1;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+        }
+
+        .social-icons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .social-link-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 16px;
+          border-radius: 6px;
+          font-size: 0.88rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .social-link-badge.linkedin {
+          color: #0077b5;
+          background: rgba(0, 119, 181, 0.12);
+          border: 1px solid rgba(0, 119, 181, 0.35);
+        }
+
+        .social-link-badge.linkedin:hover {
+          background: #0077b5;
+          color: #ffffff;
+          border-color: #0077b5;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 14px rgba(0, 119, 181, 0.35);
+        }
+
+        .social-link-badge .social-icon {
+          font-size: 1.15rem;
         }
 
         .footer-heading {
@@ -330,6 +416,34 @@ const Footer = () => {
           font-size: 0.85rem;
         }
 
+        .footer-bottom-social {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .footer-linkedin-icon-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.06);
+          color: #0077b5;
+          font-size: 1.2rem;
+          transition: all 0.25s ease;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-linkedin-icon-link:hover {
+          background: #0077b5;
+          color: #ffffff;
+          border-color: #0077b5;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 119, 181, 0.35);
+        }
+
         .copyright {
           margin-bottom: 0;
         }
@@ -358,3 +472,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
