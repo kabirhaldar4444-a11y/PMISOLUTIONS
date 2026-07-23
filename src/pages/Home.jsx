@@ -338,44 +338,58 @@ const Home = () => {
           {/* Right SVG Statistics dashboard layout */}
           <div className="dashboard-visual-wrapper">
             <div className="glass-panel statistics-dashboard flex-column gap-lg">
-              <div className="stat-heading flex-between">
-                <span>Certification Score Distribution</span>
-                <span className="badge-glow-green">Active System</span>
+              <div className="stat-heading flex-between" style={{ marginBottom: 'var(--spacing-sm)' }}>
+                <span className="stat-heading-title" style={{ fontSize: '1.05rem', fontWeight: 700 }}>Certification Score Distribution</span>
+                <span className="badge-glow-green" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.3)', padding: '0.25rem 0.75rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 600 }}>Active System</span>
               </div>
 
               {/* SVG Bar Chart */}
               <div className="bar-chart-container">
-                <svg viewBox="0 0 400 200" className="svg-bars">
-                  <line x1="40" y1="20" x2="40" y2="180" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
-                  <line x1="40" y1="180" x2="380" y2="180" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+                <svg viewBox="0 0 400 210" className="svg-bars" style={{ width: '100%', height: 'auto', overflow: 'visible' }}>
+                  {/* Axis Lines */}
+                  <line x1="45" y1="20" x2="45" y2="170" className="chart-axis-line" strokeWidth="2" />
+                  <line x1="45" y1="170" x2="385" y2="170" className="chart-axis-line" strokeWidth="2" />
                   
                   {/* Grid Lines */}
-                  <line x1="40" y1="60" x2="380" y2="60" stroke="rgba(255,255,255,0.04)" strokeWidth="1" strokeDasharray="4" />
-                  <line x1="40" y1="120" x2="380" y2="120" stroke="rgba(255,255,255,0.04)" strokeWidth="1" strokeDasharray="4" />
+                  <line x1="45" y1="50" x2="385" y2="50" className="chart-grid-line" strokeWidth="1" strokeDasharray="4 4" />
+                  <line x1="45" y1="90" x2="385" y2="90" className="chart-grid-line" strokeWidth="1" strokeDasharray="4 4" />
+                  <line x1="45" y1="130" x2="385" y2="130" className="chart-grid-line" strokeWidth="1" strokeDasharray="4 4" />
                   
-                  {/* Bars */}
-                  <rect x="70" y="80" width="30" height="100" fill="url(#blueGrad)" rx="4" />
-                  <rect x="130" y="50" width="30" height="130" fill="url(#orangeGrad)" rx="4" />
-                  <rect x="190" y="90" width="30" height="90" fill="url(#blueGrad)" rx="4" />
-                  <rect x="250" y="30" width="30" height="150" fill="url(#orangeGrad)" rx="4" />
-                  <rect x="310" y="70" width="30" height="110" fill="url(#blueGrad)" rx="4" />
+                  {/* Y-Axis Value Indicators */}
+                  <text x="36" y="54" className="chart-text-label" fontSize="10" fontWeight="600" textAnchor="end">100%</text>
+                  <text x="36" y="94" className="chart-text-label" fontSize="10" fontWeight="600" textAnchor="end">75%</text>
+                  <text x="36" y="134" className="chart-text-label" fontSize="10" fontWeight="600" textAnchor="end">50%</text>
 
-                  {/* Axis labels */}
-                  <text x="85" y="195" fill="#94A3B8" fontSize="10" textAnchor="middle">PMP</text>
-                  <text x="145" y="195" fill="#94A3B8" fontSize="10" textAnchor="middle">CAPM</text>
-                  <text x="205" y="195" fill="#94A3B8" fontSize="10" textAnchor="middle">ACP</text>
-                  <text x="265" y="195" fill="#94A3B8" fontSize="10" textAnchor="middle">CompTIA</text>
-                  <text x="325" y="195" fill="#94A3B8" fontSize="10" textAnchor="middle">ITIL</text>
+                  {/* Bars */}
+                  <rect x="70" y="70" width="32" height="100" fill="url(#blueGrad)" rx="6" className="chart-bar" />
+                  <rect x="135" y="40" width="32" height="130" fill="url(#orangeGrad)" rx="6" className="chart-bar" />
+                  <rect x="200" y="80" width="32" height="90" fill="url(#blueGrad)" rx="6" className="chart-bar" />
+                  <rect x="265" y="30" width="32" height="140" fill="url(#orangeGrad)" rx="6" className="chart-bar" />
+                  <rect x="330" y="60" width="32" height="110" fill="url(#blueGrad)" rx="6" className="chart-bar" />
+
+                  {/* Bar Value Labels Above Bars */}
+                  <text x="86" y="62" className="chart-bar-val" fontSize="11" fontWeight="700" textAnchor="middle">92%</text>
+                  <text x="151" y="32" className="chart-bar-val" fontSize="11" fontWeight="700" textAnchor="middle">99%</text>
+                  <text x="216" y="72" className="chart-bar-val" fontSize="11" fontWeight="700" textAnchor="middle">88%</text>
+                  <text x="281" y="22" className="chart-bar-val" fontSize="11" fontWeight="700" textAnchor="middle">98%</text>
+                  <text x="346" y="52" className="chart-bar-val" fontSize="11" fontWeight="700" textAnchor="middle">95%</text>
+
+                  {/* X-Axis labels */}
+                  <text x="86" y="192" className="chart-text-label" fontSize="11" fontWeight="700" textAnchor="middle">PMP®</text>
+                  <text x="151" y="192" className="chart-text-label" fontSize="11" fontWeight="700" textAnchor="middle">CAPM®</text>
+                  <text x="216" y="192" className="chart-text-label" fontSize="11" fontWeight="700" textAnchor="middle">ACP®</text>
+                  <text x="281" y="192" className="chart-text-label" fontSize="11" fontWeight="700" textAnchor="middle">CompTIA</text>
+                  <text x="346" y="192" className="chart-text-label" fontSize="11" fontWeight="700" textAnchor="middle">ITIL®</text>
 
                   {/* Definitions */}
                   <defs>
                     <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#1E3A8A" />
-                      <stop offset="100%" stopColor="#050816" />
+                      <stop offset="0%" stopColor="#3B82F6" />
+                      <stop offset="100%" stopColor="#1E3A8A" />
                     </linearGradient>
                     <linearGradient id="orangeGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#FF7A00" />
-                      <stop offset="100%" stopColor="#FF9E2A" opacity="0.3" />
+                      <stop offset="100%" stopColor="#FF9E2A" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -591,6 +605,64 @@ const Home = () => {
 
         :root.light-theme .badge-text {
           color: #0F172A;
+        }
+
+        .statistics-dashboard {
+          background: rgba(10, 14, 41, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 20px;
+          padding: var(--spacing-xl);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-heading-title {
+          color: var(--text-dark);
+        }
+
+        .chart-axis-line {
+          stroke: rgba(255, 255, 255, 0.25);
+        }
+
+        .chart-grid-line {
+          stroke: rgba(255, 255, 255, 0.12);
+        }
+
+        .chart-text-label {
+          fill: #94a3b8;
+        }
+
+        .chart-bar-val {
+          fill: #ffffff;
+        }
+
+        :root.light-theme .statistics-dashboard {
+          background: #ffffff;
+          border: 1px solid rgba(15, 23, 42, 0.12);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        :root.light-theme .stat-heading-title {
+          color: #0F172A !important;
+        }
+
+        :root.light-theme .chart-axis-line {
+          stroke: #64748b !important;
+        }
+
+        :root.light-theme .chart-grid-line {
+          stroke: #cbd5e1 !important;
+        }
+
+        :root.light-theme .chart-text-label {
+          fill: #334155 !important;
+        }
+
+        :root.light-theme .chart-bar-val {
+          fill: #0F172A !important;
+        }
+
+        :root.light-theme .m-lbl {
+          color: #475569 !important;
         }
 
         .hero-headline {
