@@ -568,6 +568,11 @@ const Home = () => {
           position: relative;
         }
 
+        :root.light-theme .hero-badge-pill {
+          background: rgba(15, 23, 42, 0.06);
+          border: 1px solid rgba(15, 23, 42, 0.15);
+        }
+
         .badge-glow {
           width: 6px;
           height: 6px;
@@ -580,8 +585,12 @@ const Home = () => {
           font-size: 0.78rem;
           font-weight: 600;
           letter-spacing: 0.5px;
-          color: #e2e8f0;
+          color: var(--text-dark);
           text-transform: uppercase;
+        }
+
+        :root.light-theme .badge-text {
+          color: #0F172A;
         }
 
         .hero-headline {

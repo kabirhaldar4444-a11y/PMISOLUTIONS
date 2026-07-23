@@ -50,7 +50,7 @@ const Credentials = () => {
             <div className="intro-text-luxury flex-column gap-md animate-fade-in">
               <div className="hero-badge-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', padding: '0.35rem 0.95rem', borderRadius: '50px', marginBottom: '0.5rem', width: 'fit-content' }}>
                 <span className="badge-glow" style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--accent-color)', boxShadow: '0 0 10px var(--accent-color)' }}></span>
-                <span className="badge-text" style={{ fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.5px', color: '#e2e8f0', textTransform: 'uppercase' }}>Audited Excellence</span>
+                <span className="badge-text" style={{ fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.5px', color: 'var(--text-dark)', textTransform: 'uppercase' }}>Audited Excellence</span>
               </div>
               
               <h1 style={{ fontSize: '2.8rem', fontWeight: 800, letterSpacing: '-1px', lineHeight: '1.2' }}>

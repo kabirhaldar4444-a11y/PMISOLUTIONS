@@ -347,3 +347,14 @@
 :root.light-theme .form-control:focus {
   background-color: rgba(255, 255, 255, 0.9);
 }
+
+/* Light theme overrides for hero badge pills */
+:root.light-theme .hero-badge-pill {
+  background: rgba(15, 23, 42, 0.06) !important;
+  border-color: rgba(15, 23, 42, 0.15) !important;
+}
+
+:root.light-theme .badge-text {
+  color: #0F172A !important;
+}
+
